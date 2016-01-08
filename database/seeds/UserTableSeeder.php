@@ -11,8 +11,9 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
+      /*
         DB::table('users')->insert([
-          'name' => 'Diky Arga',
+            'name' => 'Diky Arga',
             'username' => 'dikyarga',
             'email' => 'hello@dikyarga.com',
             'password' => bcrypt('secret'),
@@ -20,12 +21,12 @@ class UserTableSeeder extends Seeder
             'created_at' => Carbon\Carbon::now(),
             'updated_at' => Carbon\Carbon::now(),
         ]);
+        */
 
-        /*
         for ($i=0; $i < 10; $i++) {
           #
           DB::table('users')->insert([
-            'name' => str_random(10),
+              'name' => str_random(10),
               'username' => str_random(10),
               'email' => str_random(10).'@gmail.com',
               'password' => bcrypt('secret'),
@@ -34,7 +35,7 @@ class UserTableSeeder extends Seeder
               'updated_at' => Carbon\Carbon::now(),
           ]);
         }
-        */
+
 
 
     }
