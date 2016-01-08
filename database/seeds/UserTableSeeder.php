@@ -30,7 +30,7 @@ class UserTableSeeder extends Seeder
               'username' => str_random(10),
               'email' => str_random(10).'@gmail.com',
               'password' => bcrypt('secret'),
-              'role' => 'anggota';
+              'role' => 'anggota',
               'created_at' => Carbon\Carbon::now(),
               'updated_at' => Carbon\Carbon::now(),
           ]);
