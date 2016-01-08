@@ -20,6 +20,8 @@ class UserTableSeeder extends Seeder
             'created_at' => Carbon\Carbon::now(),
             'updated_at' => Carbon\Carbon::now(),
         ]);
+
+        /*
         for ($i=0; $i < 10; $i++) {
           #
           DB::table('users')->insert([
@@ -32,6 +34,7 @@ class UserTableSeeder extends Seeder
               'updated_at' => Carbon\Carbon::now(),
           ]);
         }
+        */
 
 
     }
