@@ -13,7 +13,7 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        /*
+
         DB::table('users')->insert([
             'name' => 'Diky Arga',
             'username' => 'dikyarga',
@@ -23,7 +23,7 @@ class UserTableSeeder extends Seeder
             'created_at' => Carbon\Carbon::now(),
             'updated_at' => Carbon\Carbon::now(),
         ]);
-        */
+        
 
         $faker = \Faker\Factory::create();
 
