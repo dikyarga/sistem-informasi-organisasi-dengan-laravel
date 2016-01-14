@@ -42,7 +42,7 @@
         <li class="panel-body">
           <div class="list-group">
             <div class="list-group-item">
-              <h3>{{ $comment->author->name }}</h3>
+              <h3> <a href="{{ url('/user/'.App\User::find($comment->from_user)->username)}}"> {{ $comment->author->name }} </a></h3>
                 <p>{{ $comment->created_at->diffForHumans() }}</p>
             </div>
             <div class="list-group-item">

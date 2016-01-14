@@ -1,5 +1,7 @@
 <?php
 
+use App\User;
+
 use Illuminate\Database\Seeder;
 
 class UserTableSeeder extends Seeder
@@ -11,7 +13,7 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-      /*
+        /*
         DB::table('users')->insert([
             'name' => 'Diky Arga',
             'username' => 'dikyarga',
@@ -23,19 +25,19 @@ class UserTableSeeder extends Seeder
         ]);
         */
 
-        for ($i=0; $i < 10; $i++) {
-          #
-          DB::table('users')->insert([
-              'name' => str_random(10),
-              'username' => str_random(10),
-              'email' => str_random(10).'@gmail.com',
-              'password' => bcrypt('secret'),
-              'role' => 'anggota',
-              'created_at' => Carbon\Carbon::now(),
-              'updated_at' => Carbon\Carbon::now(),
-          ]);
-        }
+        $faker = \Faker\Factory::create();
 
+        foreach(range(1,10) as $index)
+        {
+          User::create([
+            'name' => $faker->name,
+            'username'     => $faker->firstName($gender = null|'male'|'female'),
+            'email'      => $faker->email,
+            'password'      => bcrypt('secret'),
+            'role'    => 'anggota',
+
+            ]);
+        }
 
 
     }

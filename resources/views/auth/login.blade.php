@@ -9,17 +9,18 @@ Masuk
 <form method="POST" action="/auth/login">
     {!! csrf_field() !!}
     <div class="form-group">
-      <label for="inputEmail" class="col-md-2 control-label">Username</label>
 
-      <div class="col-md-10">
-        <input class="form-control" id="inputEmail" placeholder="Username" type="text" value="{{ old('username') }}" name="username">
+      <label for="inputEmail" class="col-md-3 control-label"> <i class="material-icons pull-right">account_box</i></label>
+
+      <div class="col-md-7">
+                {!! Form::text('username', null, ['class' => 'form-control', 'placeholder' => 'Username', 'required', 'autofocus', 'id' => 'inputUsername' ]) !!}
       </div>
     </div>
 
     <div class="form-group">
-      <label for="inputPassword" class="col-md-2 control-label">Password</label>
+      <label for="inputPassword" class="col-md-3 control-label"><i class="material-icons pull-right">lock</i></label>
 
-      <div class="col-md-10">
+      <div class="col-md-7">
         <input class="form-control" id="inputPassword" placeholder="Password" type="password" name="password">
 
 
@@ -27,7 +28,7 @@ Masuk
     </div>
 
     <div class="form-group" style="margin-top: 0;"> <!-- inline style is just to demo custom css to put checkbox below input above -->
-      <div class="col-md-offset-2 col-md-10">
+      <div class="col-md-offset-3 col-md-8">
         <div class="checkbox">
           <label>
             <input type="checkbox" name="remember"> Tetap masuk
@@ -37,7 +38,7 @@ Masuk
     </div>
 
     <div class="form-group">
-      <div class="col-md-10 col-md-offset-2">
+      <div class="col-md-10 col-md-offset-3">
           <button type="submit" class="btn btn-primary">Masuk</button>
           <button type="button" class="btn btn-default">Batal</button>
       </div>
