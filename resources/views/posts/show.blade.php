@@ -10,7 +10,7 @@
   @endif
 @endsection
 @section('title-meta')
-<p>{{ $post->created_at->format('M d,Y \a\t h:i a') }} oleh <a href="{{ url('/user/'.App\User::find($post->author_id)->username)}}">{{ $post->author->name }}</a></p>
+<p>{{ $post->created_at->format('M d,Y \a\t h:i a') }} oleh <a href="{{ url('/user/'.$post->author->username)}}">{{ $post->author->name }}</a></p>
 @endsection
 @section('content')
 @if($post)

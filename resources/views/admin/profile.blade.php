@@ -55,7 +55,7 @@
       </p>
     @endforeach
     @else
-    <p>Kamu belum pernah nulis sampai sekarang, ayo tulis sesuatu!</p>
+    <p>Belum ada postingan dari {{$user->name}}</p>
     @endif
   </div>
 </div>
@@ -72,7 +72,7 @@
     @endforeach
     @else
     <div class="list-group-item">
-      <p>Kamu belum pernah berkomentar, ayo keluarkan unek-unek mu.</p>
+      <p>belum ada komentar dari {{$user->name}}</p>
     </div>
     @endif
   </div>
