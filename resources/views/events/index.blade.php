@@ -9,7 +9,7 @@
   @endif
   {{-- {{dd($acara->get())}} --}}
   @foreach($acara as $event)
-    <h3>{{ $event->title }}</h3>
+    <a href="{{ url('/event/'.$event->slug) }}"><h3>{{ $event->title }}</h3></a>
     {{ $event->datetime }}<br/>
   @endforeach
 @endsection

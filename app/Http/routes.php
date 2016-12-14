@@ -18,8 +18,8 @@ Route::get('/tentang', function(){
 });
 // Halaman Event
 Route::get('/event', 'EventController@index');
-// Route::get('/event/{slug}', 'EventController@show');
 Route::get('/event/create', 'EventController@create');
+Route::get('/event/{slug}', 'EventController@show');
 Route::post('/event/create', 'EventController@store');
 
 // Halaman Statik Kontak
