@@ -16,6 +16,7 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->boolean('active')->default(false);
             $table->string('title');
             $table->string('slug');
             $table->string('description');

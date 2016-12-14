@@ -16,13 +16,13 @@ Route::get('/','PostController@index');
 Route::get('/tentang', function(){
     return view('tentang');
 });
-// Halaman Statik Tentang
+// Halaman Event
+Route::get('/event', 'EventController@index');
+// Route::get('/event/{slug}', 'EventController@show');
+Route::get('/event/create', 'EventController@create');
+Route::post('/event/create', 'EventController@store');
 
-Route::get('/event', function(){
-    return view('event');
-});
 // Halaman Statik Kontak
-
 Route::get('/kontak', function(){
     return view('kontak');
 });

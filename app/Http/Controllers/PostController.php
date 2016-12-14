@@ -28,7 +28,7 @@ class PostController extends Controller
        //return home.blade.php template from resources/views folder
        return view('home')->withPosts($posts)->withTitle($title);
      }
-     
+
 
     /**
      * Show the form for creating a new resource.
@@ -92,6 +92,8 @@ class PostController extends Controller
       }
       $comments = $post->comments;
       return view('posts.show')->withPost($post)->withComments($comments);
+      // atau bisa pakai compact
+      // return view('posts.show', compact('post', 'comments'));
 
     }
 

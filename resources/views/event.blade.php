@@ -7,9 +7,7 @@ Event Doscom
 
 
 @section('content')
-<blockquote >
 
-<p>Nantinya berisi agenda kegiatan doscom selama satu periode kepengurusan</p>
-</blockquote>
+@endforeach
 
 @endsection
